@@ -59,7 +59,7 @@ public class CategoryServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		saveCategory(request, response);
-		showCategory(request, response);
+		
 	}
 	
 	
@@ -77,7 +77,8 @@ public class CategoryServlet extends HttpServlet {
 	            request.setAttribute("errorMessage", errorMessage);
 	            request.getRequestDispatcher("category.jsp").forward(request, response);
 	        } else {
-	            response.sendRedirect("save_success.jsp"); // redirect to success page
+	            //response.sendRedirect("save_success.jsp"); // redirect to success page
+	        	showCategory(request, response);
 	        }
 		}catch(Exception ex) {
 			
