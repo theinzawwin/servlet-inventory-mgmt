@@ -110,7 +110,22 @@ public class ProductServlet extends HttpServlet {
 			}
 			
 		}else {
-			response.sendRedirect("save_success.jsp");
+			//response.sendRedirect("save_success.jsp");
+			try {
+				showAllProduct(request,response);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 	}

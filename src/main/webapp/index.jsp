@@ -8,6 +8,7 @@
 </head>
 <body>
 <h3>Welcome from PYS Inventory Management System</h3>
+<%@ include file="header.jsp" %>
 <%@ include file="menu.jsp" %>
 </body>
 </html>
